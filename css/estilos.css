@@ -155,7 +155,7 @@ img {
   text-decoration: none;
   border-left: 1px solid rgb(207, 202, 202);
   border-right: 1px solid rgb(207, 202, 202);
-  padding: 0 3px;
+  padding: 0 1px;
 }
 
 .navegador a:hover {
@@ -237,7 +237,7 @@ img {
 .main h2 {
   text-align: center;
   margin: 2rem 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 900;
 }
 
