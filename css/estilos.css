@@ -17,7 +17,7 @@ html {
 body{
     font-size: 1.6rem;
     font-family: var(--fuentePrincipal);
-    background-color: white;
+    background-color:var(--colorFondo);
     line-height: 1.5;
 }
 /**GLOBALES**/
@@ -73,37 +73,45 @@ img{
 
 .menu-logo{
     display: flex;
-    column-gap: 3rem;
+    column-gap: 0.2rem;
 }
 
 .menu-logo a{
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
+
+@media (min-width: 768px) { 
+  .menu-logo a{
+    font-size: 2.5rem;
+  }
+ }
+
 
 .logo h1{
-    display: inline-block;
-    margin: 0;
-    padding: 1rem 0;
-    color: var(--colorBlanco);
-    cursor: pointer;
-    font-size: 7rem;
-    border:1rem solid  var(--colorPrincipal1);
-    text-transform:uppercase;
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin: 0;
+  padding: 1rem 0;
+  color: var(--colorBlanco);
+  cursor: pointer;
+  font-size: 2rem;
+  border:0.3rem solid  var(--colorPrincipal1);
+  text-transform:uppercase;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width:768px ) { 
-  .logo h1{
-    display: inline-block;
-    margin: 0;
-    padding: 1rem 0;
-    color: var(--colorBlanco);
-    cursor: pointer;
-    font-size: 2rem;
-    border:0.3rem solid  var(--colorPrincipal1);
-    text-transform:uppercase;
-    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
-}
+@media (min-width: 768px) { 
+    
+    .logo h1{
+      display: inline-block;
+      margin: 0;
+      padding: 1rem 0;
+      color: var(--colorBlanco);
+      cursor: pointer;
+      font-size: 7rem;
+      border:1rem solid  var(--colorPrincipal1);
+      text-transform:uppercase;
+      text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    }
  }
 
 /** FIN PROMOCION SUPERIOR**/
@@ -111,57 +119,62 @@ img{
 /**NAVEGADOR**/
 
 .nav-fondo{
+  background-color: var(--colorFondo);
+  height: 6rem;
+} 
+
+@media (min-width: 768px) { 
+  .nav-fondo{
     background-color: var(--colorFondo);
     height: 10rem;
 }
-
-@media (max-width: 768px) {
-  .nav-fondo{
-    background-color: var(--colorFondo);
-    height: 6rem;
-} 
-    
  }
 
-.navegador{
+
+ .navegador{
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (min-width: 768px) { 
+  .navegador{
     display: flex;
     justify-content: center;
     column-gap: 20rem;
     align-items: center;
     padding: 3rem;
 }
-
-@media (max-width:768px ) { 
-  .navegador{
-    display: flex;
-    justify-content: center;
-    column-gap: 2rem;
-    text-align: center;
-    padding: 1rem 0;
-}
  }
 
+
 .navegador a{
-    color: black;
-    font-size: 1.7rem;
-    font-weight: 600;
-    transition: 0.5s;
-}
-.navegador a:hover{
-    color: rgb(237, 6, 6);
-    font-weight: 600;
+  color: black;
+  font-size: 1.7rem;
+  font-weight: 600;
+  transition: 0.5s;
+  padding: 1rem 0;
 }
 
-@media (max-width: 768px) { 
+.navegador a:hover{
+  color: rgb(237, 6, 6);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) { 
   .navegador a{
     color: black;
     font-size: 1.7rem;
     font-weight: 600;
     transition: 0.5s;
-    padding: 1rem 0;
 }
  }
 
+
+  
+ 
 /**FIN NAVEGADOR**/
 
 /**INICIO SWIPER SLIDER**/
@@ -217,14 +230,15 @@ img{
 
 .main h2{
   text-align: center;
-  margin: 5rem 0;
-  font-size:4rem;
+  margin: 2rem 0;
+  font-size:2rem;
 }
-@media (max-width:768px ) { 
+
+@media (min-width: 768px) { 
   .main h2{
     text-align: center;
-    margin: 2rem 0;
-    font-size:2rem;
+    margin: 5rem 0;
+    font-size:4rem;
   }
  }
 
@@ -234,8 +248,8 @@ img{
 
 .productos{
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(2,2fr);
+  gap: 1rem;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -243,46 +257,70 @@ img{
   padding:0 2rem; 
 }
 
-@media (max-width:768px ) { 
+@media (min-width:768px ) { 
   .productos{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 5rem;
-    padding:0 2rem; 
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem; 
   }
  }
 
 .producto{
-
+background-color: var(--colorBlanco);
+overflow: hidden;
+padding-bottom: 3rem;
 }
 
-.producto img{
+.producto h3{
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.producto p{
+  margin: 0;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) { 
+  .producto h3{
+    font-size:3rem;
+  }
   
-}
+  .producto p{
+    font-size: 2rem;
+  }
+ }
+
 
 .boton{
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  color: var(--colorBlanco);
-  background-color: var(--colorPrimario);
-  padding: 1rem 2rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: 0.5s; 
-  cursor: pointer;
-  border-radius: 10px;
-  
+    display: inline;
+    background-color: var(--colorPrincipal1);
+    padding: 0.4rem 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem; 
+    font-size: 1.5rem;
+    border-bottom-left-radius:2rem ;
+    border-top-right-radius:2rem ;
 }
 .boton:hover{
-  text-decoration: none;
-  color: var(--colorBlanco);
-  background-color: red;
-  padding: 1.2rem 2.2rem;
-  font-size: 1.6rem;
+    background-color: var(--colorPrincipal2);
+    padding: 0.4rem 4rem;
+    font-size: 1.51rem;
 }
+
+@media (min-width: 768px) { 
+  .boton{
+    background-color: var(--colorPrincipal1);
+    padding: 0.4rem 5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  .boton:hover{
+    background-color: var(--colorPrincipal2);
+    padding: 0.4rem 6rem;
+    font-size: 2.6rem;
+    
+  }
+ }
