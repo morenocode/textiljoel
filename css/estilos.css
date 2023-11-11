@@ -34,6 +34,7 @@ body {
 img {
   width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 
@@ -326,14 +327,114 @@ img {
     padding: 0.4rem 5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    font-size: 2.5rem;
+    font-size:1.8rem;
     transition: 0.5s;
   }
 
   .boton:hover {
     background-color: var(--colorPrincipal2);
     padding: 0.4rem 6rem;
-    font-size: 2.6rem;
+    font-size: 2rem;
 
   }
 }
+
+/**SWIPPER - PRODUCTOS**/
+/**FIN DE MEDAI QUERI**/
+.swiper-productos {
+  width: 100%;
+  max-width: 1600px;
+  margin-bottom: 1rem;
+ 
+}
+
+.producto-slider{
+  background-color: #fff;
+  text-align: center;
+  padding-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.producto-slider img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centrar la imagen horizontalmente */
+  max-height: 100%; /* Asegurar que la imagen no desborde verticalmente */
+}
+
+.producto-slider h3,
+.producto-slider p {
+  margin: 10px 0; /* Agregar espacio entre elementos */
+}
+
+
+.swiper-productos img {
+  width: 200px;
+  height: 200px;
+  
+
+
+}
+
+@media (min-width: 768px) {
+  .swiper-productos img {
+    width: 300px;
+    height: 300px;
+    
+  }
+}
+
+@media (min-width: 1024px) {
+  .swiper-productos img {
+    height: auto;
+  
+  }
+}
+/**FIN DE MEDAI QUERI**/
+
+.swiper-productos .swiper-button-prev,
+.swiper-productos .swiper-button-next {
+  --swiper-navigation-size: 20px;
+  background-color: white;
+  height: 70px;
+  width: 50px;
+  margin-top: -35px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.swiper-productos .swiper-button-prev {
+  border-radius: 0 65px 65px 0;
+  left: -10px;
+}
+.swiper-productos .swiper-button-next {
+  border-radius: 65px 0 0 65px;
+  right: -10px;
+}
+
+.swiper-productos:hover .swiper-button-prev,
+.swiper-productos:hover .swiper-button-next {
+  opacity: 1;
+}
+
+.swiper-productos .swiper-pagination {
+  display: none;
+  --swiper-pagination-color: white;
+  --swiper-pagination-bullet-size: 6px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.25;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 2px;
+}
+
+.swiper-productos .swiper-pagination-bullet {
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.swiper-productos .swiper-pagination-bullet-active {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
