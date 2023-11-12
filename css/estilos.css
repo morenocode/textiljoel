@@ -2,7 +2,7 @@
   --fuentePrincipal: 'Merienda', cursive;
   --colorPrincipal1: #cf2819;
   --colorPrincipal2: #192bcf;
-  --colorFondo: #F2EDE3;
+  --colorFondo: rgb(255, 255, 255);
   --colorBlanco: #ffffff;
 }
 
@@ -444,10 +444,10 @@ img {
 /**CATEGORIAS PRODUCTOS**/
 
 .categoria-productos, .categoria-clientes{
-  margin: 2rem 0;
-  margin-bottom: 5rem;
+  
   display: grid;
   grid-template-columns: repeat(2,1fr);
+  
 }
 
 .categoria-productos img, .categoria-clientes img{
@@ -591,3 +591,144 @@ img {
   }
 
 }
+
+/**FIN WHATSAPP**/
+
+/**FOOTER**/
+
+.footer{
+  background-color: var(--colorPrincipal2);
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-superior{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  color: white;
+  padding: 0 2rem;
+}
+
+@media (min-width: 768px) { 
+  .footer-superior{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    color: white;
+    padding: 0 2rem;
+  }
+ }
+
+.footer-ezquierda{
+  display: flex;
+  flex-direction: column;
+  color: var(--colorBlanco);
+}
+
+.footer-ezquierda a{
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--colorBlanco);
+  font-weight: 100;
+  transition: 0.5s;
+  padding-top: 1rem;
+}
+
+.footer-ezquierda a:hover{
+  font-size:2.1rem ;
+}
+
+.footer-ezquierda h3, .footer-centro h3{
+  font-weight: 800;
+}
+
+.footer-pie{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  text-align: center;
+  color: var(--colorBlanco);
+  background-color: #000;
+  padding: 0;
+}
+
+.footer-pie__img{
+  order: 2;
+}
+
+.sociales{
+  order: 1;
+  gap: 2rem;
+  margin-top:2rem
+}
+
+@media (min-width: 768px) { 
+  .footer-pie{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: var(--colorBlanco);
+    padding: 1rem 15rem 1rem 2rem;
+  }
+  .footer-pie__img{
+    order: 1;
+  }
+  
+  .sociales{
+    order: 2;
+    margin-top:0rem
+  }
+ }
+
+ .footer-pie .mapa{
+  width:20px;
+  height: 20px;
+ }
+
+ @media (min-width: 769px) { 
+  .footer-pie .mapa{
+    width:35px;
+    height: 35px;
+    
+   }
+  }
+
+.footer-pie p{
+  font-size: 1rem;
+  
+}
+@media (min-width: 768px) { 
+  .footer-pie p{
+    font-size: 2rem;
+  }
+ }
+
+.footer-pie__img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.footer-pie .sociales{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) { 
+  .footer-pie .sociales{
+    display: flex;
+  }
+  
+ }
+
+.social{
+  width: 30px;
+  height: 30px;
+} 
+@media (min-width: 768px) { 
+  .social{
+    width: 44px;
+    height: 44px;
+  } 
+ }
