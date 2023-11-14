@@ -441,21 +441,54 @@ img {
 
 /**SWIPPER FINAL**/
 
-/**CATEGORIAS PRODUCTOS**/
+/**CATEGORIAS CLIENTES**/
 
-.categoria-productos, .categoria-clientes{
-  
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  
+.categoria-clientes{
+  margin-bottom: 4rem;
 }
 
-.categoria-productos img, .categoria-clientes img{
+.cliente-titulo {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+@media (min-width: 768px) {
+  .cliente-titulo {
+    text-align: center;
+    margin: 5rem 0;
+    font-size: 4rem;
+  }
+}
+
+.clientes{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+}
+@media (min-width: 768px) { 
+  .clientes{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+ }
+
+
+/**FINAL CLIENTES**/
+
+/**CATEGORIAS PRODUCTOS**/
+
+
+
+
+
+
+.categoria-productos img{
   cursor: pointer;
 }
 
 @media (min-width: 768px) { 
-  .categoria-productos, .categoria-clientes{
+  .categoria-productos{
     display: grid;
     grid-template-columns: repeat(4,1fr);
   }
