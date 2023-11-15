@@ -50,6 +50,7 @@ img {
   display: flex;
   padding: 0 3rem;
   align-items: center;
+  
 }
 
 .logo {
@@ -632,7 +633,7 @@ img {
 /**FOOTER**/
 
 .footer{
-  background-color: var(--colorPrincipal2);
+  background-color: #0b0283;
   display: flex;
   flex-direction: column;
 }
