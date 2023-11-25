@@ -712,19 +712,32 @@ img {
 
  /**ESTILOS DE BOOSTRAP**/
 
+
+
 .logojoel{
   background-color: var(--colorBlanco);
   border-radius: 20%;
+  height: 50px;
+  width:50px;
 }
+
+@media (min-width: 768px) { 
+  .logojoel{
+    background-color: var(--colorBlanco);
+    border-radius: 20%;
+    height: 150px;
+    width:150px;
+  }
+ }
 
  .tamano-a{
   font-size: 2rem;
-  color:var(--colorBlanco);
+  color:red;
   text-decoration: none;
  }
 
  .tamano-a:hover{
-  color: yellow;
+  color: blue;
  }
 
  .tamano-a:active {
@@ -738,23 +751,23 @@ img {
 @media (min-width: 768px) { 
   .tamano-a{
     font-size: 2rem;
-    color:var(--colorBlanco);
+    color:red;
    }
   
  }
 
  nav{
-  background-color: #cf2819;
+  background-color: var(--colorBlanco);
   color: white;
  }
 
  .navegador-b{
-  margin:0 3rem;
-  padding: 2rem;
+  margin:0 1rem;
+  padding: 0rem;
  }
 
  .fondo-navegador{
-  background-color: #cf2819;
+  background-color: #fffffe;
   
  }
 
@@ -769,6 +782,6 @@ img {
   }
 
 .navbar-toggler{
-    background-color: white;
-    border-color:var(--colorBlanco) ;
+    border:white;
+    color: white;
  }
